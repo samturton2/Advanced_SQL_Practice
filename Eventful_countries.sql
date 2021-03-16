@@ -1,16 +1,16 @@
 Use WorldEvents
 GO
 
-select * from tblCategory;
+select top 10 * from tblCategory;
 select * from tblContinent;
-select * from tblCountry;
-select * from tblEvent;
+select top 10 * from tblCountry;
+select top 10 * from tblEvent;
 
 --- Write a query which lists out countries which have more than 8 events, using a correlated subquery rather than HAVING. 
 
 SELECT cou.CountryName FROM tblCountry cou
 WHERE 8 <   (SELECT Count(ev.EventID) 
-            FROM tblEvent ev 
+            FROM tblEvent ev
             WHERE ev.CountryID = cou.CountryID)
 ORDER BY cou.CountryName ASC;
 

@@ -13,13 +13,19 @@ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:143
 ```sql
 select top 10 * from tblCategory;
 ```
-1	Politics
-2	Alien life
-3	Exploration
-4	Natural world
-5	Death and disaster
-6	War and conflict
-7	Sports
-8	Economy
-9	Entertainment and culture
-10	Health and medicine
+![](img/tblCategory.png)
+
+```sql
+select * from tblContinent;
+```
+![](img/tblContinent.png)
+
+```sql
+select top 10 * from tblCountry;
+```
+![](img/tblCountry.png)
+
+```sql
+select top 10 * from tblEvent;
+```
+![](img/tblEvent.png)
