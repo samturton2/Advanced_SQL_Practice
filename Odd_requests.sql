@@ -12,5 +12,5 @@ WITH OddCountries AS (
 SELECT ev.EventName, o.OddName
 FROM tblEvent ev
 RIGHT JOIN OddCountries o ON o.OddID = ev.CountryID
-WHERE ev.EventName NOT LIKE '%'+ o.OddName + '%'
+WHERE ev.EventName NOT LIKE '%' + o.OddName + '%'
 AND RIGHT(ev.EventName, 1) = RIGHT(o.OddName, 1);
